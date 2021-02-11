@@ -53,9 +53,12 @@ public class Pantalla extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         cbxTipoVehiculo = new javax.swing.JComboBox<>();
         ftfPlacaM = new javax.swing.JFormattedTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(356, 329));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -68,21 +71,22 @@ public class Pantalla extends javax.swing.JFrame {
 
         lblPlaca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPlaca.setText("PLACA");
-        getContentPane().add(lblPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 70, 60, 24));
+        getContentPane().add(lblPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 60, 24));
 
         lblDate.setText("FECHA Y HORA");
-        getContentPane().add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 101, -1, 24));
+        getContentPane().add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, 24));
 
+        btnConsulta.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gorila\\Downloads\\search.png")); // NOI18N
         btnConsulta.setText("Consultar");
         btnConsulta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnConsultaMouseClicked(evt);
             }
         });
-        getContentPane().add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 215, -1, -1));
+        getContentPane().add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 250, -1, -1));
 
         lblFechaEjemplo.setText("10/02/2021 14:30");
-        getContentPane().add(lblFechaEjemplo, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 141, 155, -1));
+        getContentPane().add(lblFechaEjemplo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 155, -1));
 
         ftfPlacaV.setFormatterFactory(new javax.swing.JFormattedTextField.AbstractFormatterFactory() {
             public javax.swing.JFormattedTextField.AbstractFormatter
@@ -94,7 +98,7 @@ public class Pantalla extends javax.swing.JFrame {
                 }
                 return null; } }
     );
-    getContentPane().add(ftfPlacaV, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 71, 133, -1));
+    getContentPane().add(ftfPlacaV, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 133, -1));
 
     ftfFecha.setFormatterFactory(new javax.swing.JFormattedTextField.AbstractFormatterFactory() {
         public javax.swing.JFormattedTextField.AbstractFormatter
@@ -105,13 +109,13 @@ public class Pantalla extends javax.swing.JFrame {
                 pe.printStackTrace();
             }
             return null; } });
-getContentPane().add(ftfFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 102, 133, -1));
+getContentPane().add(ftfFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 133, -1));
 
 lblFechaFormato.setText("dd/MM/aaaa HH:mm");
-getContentPane().add(lblFechaFormato, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 164, 155, -1));
+getContentPane().add(lblFechaFormato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 155, -1));
 
 jLabel1.setText("TIPO VEHÍCULO");
-getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 33, -1, -1));
+getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
 cbxTipoVehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione una opcion", "Automovil", "Moto" }));
 cbxTipoVehiculo.addItemListener(new java.awt.event.ItemListener() {
@@ -119,7 +123,7 @@ cbxTipoVehiculo.addItemListener(new java.awt.event.ItemListener() {
         cbxTipoVehiculoItemStateChanged(evt);
     }
     });
-    getContentPane().add(cbxTipoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 30, 150, -1));
+    getContentPane().add(cbxTipoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 150, -1));
 
     ftfPlacaM.setFormatterFactory(new javax.swing.JFormattedTextField.AbstractFormatterFactory() {
         public javax.swing.JFormattedTextField.AbstractFormatter
@@ -130,7 +134,14 @@ cbxTipoVehiculo.addItemListener(new java.awt.event.ItemListener() {
                 pe.printStackTrace();
             }
             return null; } });
-getContentPane().add(ftfPlacaM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 140, -1));
+getContentPane().add(ftfPlacaM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 140, -1));
+
+jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+jLabel2.setText("Prueba Mardis");
+getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
+
+jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 330));
 
 pack();
 }// </editor-fold>//GEN-END:initComponents
@@ -330,6 +341,8 @@ pack();
     private javax.swing.JFormattedTextField ftfPlacaM;
     private javax.swing.JFormattedTextField ftfPlacaV;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDate;
     private javax.swing.JLabel lblFechaEjemplo;
     private javax.swing.JLabel lblFechaFormato;
